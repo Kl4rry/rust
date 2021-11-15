@@ -6,6 +6,9 @@ use regex::{Match, Regex};
 
 use std::{convert::TryFrom, error::Error, fmt};
 
+#[cfg(feature = "serde")]
+mod serde_support;
+
 lazy_static! {
     static ref PNR_REGEX: Regex = Regex::new(
         r"(?x)
